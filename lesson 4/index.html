@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // - створити функцію яка обчислює та повертає площу прямокутника зі сторонами а і б
+        function square (a, b){
+            let s = a * b;
+            return s;
+        };
+        let result = square(20, 3);
+        console.log('square =', result);
+
+        console.log('HW 2-----------------------');
+        // - створити функцію яка обчислює та повертає площу кола з радіусом r
+        function radius (r){
+            let rad = 2 * 3.14 * r;
+            return rad;
+        };
+
+        let radResult = radius(5.3);
+        console.log('radius =', radResult);
+
+        console.log('HW 3-----------------------');
+        // - створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r
+        function culinder (r, h){
+            let culsquare = 2 * 3.14 * r * (r * h);
+            return culsquare;
+        };
+
+        let culResult = culinder (2, 4)
+        console.log('Culinder square =', culResult)
+
+        console.log('HW 4-----------------------');
+        // - створити функцію яка приймає масив та виводить кожен його елемент
+        let arrA = [
+            {name: 'sascha', age: 36},
+            {name: 'maksym', age: 50},
+            {name: 'valera', age: 30},
+            {name: 'sascha', age: 20},
+            {name: 'lox', age: 32},
+            {name: 'pedro', age: 35},
+            ]
+
+            function arrayPrinter (arr){
+                for (const arrElement of arr){
+                    console.log(arrElement)
+                }
+            }
+            arrayPrinter(arrA)
+
+        console.log('HW 5-----------------------HTML');    
+        // - створити функцію яка створює параграф з текстом та виводить його через document.write. Текст задати через аргумент
+        function printIntoHtml (msg){
+            document.write(`<p>${msg}</p>`);
+        }
+        printIntoHtml ('Hello world!')
+
+        console.log('HW 6-----------------------HTML');
+        // - створити функцію яка створює ul з трьома елементами li та виводить його через document.write. Текст li задати через аргумент всім однаковий
+        function printIntoHtmlUl (msg){
+            document.write(`<ul>
+                <li>${msg}</li>
+                <li>${msg}</li>
+                <li>${msg}</li>
+                </ul>`);
+        }
+        printIntoHtmlUl ('Hello world! Help me i dont wanna go to school!')
+
+        console.log('HW 7-----------------------HTML');
+        // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список (ul li) та виводить його через document.write
+        function foobar (arrayWithPrimitives){
+            document.write(`<ul>`)
+            for (const item of arrayWithPrimitives){
+                document.write(`<li>${item}</li>`)
+            }
+            document.write(`</ul>`)
+        }
+
+        foobar([111, 222, 333, 'Hello', 'Bye Bye', true, false])
+
+        console.log('HW 8-----------------------HTML');
+        // - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.
+
+        function ArrayDivPrint (users){
+                for (const arraydiv of users){
+                    document.write(
+                        `<div>${arraydiv.id} ${arraydiv.name} ${arraydiv.age}</div>`);
+                }
+        }
+        ArrayDivPrint([
+            {id:1, name: 'sascha', age: 36},
+            {id:2, name: 'maksym', age: 50},
+            {id:3, name: 'valera', age: 30},
+            {id:4, name: 'sascha', age: 20},
+            {id:5, name: 'lox', age: 32},
+            {id:6, name: 'pedro', age: 35},
+            ])
+        console.log('HW 9-----------------------');
+        // - створити функцію яка повертає найменьше число з масиву
+
+        function arrayMinValue (numbers){
+            let min = numbers[0];
+            for (const number of numbers){
+                if (number < min){
+                    min = number
+                }
+            }
+            return min;
+        }
+        
+
+        console.log(arrayMinValue([11, 22, 1, 33, 444 ,-3]))
+
+        console.log('HW 10-----------------------');
+        // - створити функцію sum(arr) яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад sum([1,2,10]) //->13
+
+        function sumOfNumbers (sum){
+            let basket = 0;
+            for (const item of sum){
+                basket = basket + item;
+            }
+            return basket;
+        }
+        console.log(sumOfNumbers([1, 2, 30]))
+
+        console.log('HW 11-----------------------');
+        // - створити функцію swap(arr,index1,index2). Функція міняє місцями заняення у відповідних індексах Приклад  swap([11,22,33,44],0,1) //=> [22,11,33,44]
+        
+        function swap(arr, index1, index2){
+            let temp = arr[index1];
+            arr[index1] = arr[index2];
+            arr[index2] = temp;
+
+            return arr
+        }
+        console.log(swap([11, 22, 33, 44], 0, 1));
+
+        console.log('HW 12-----------------------');
+        // - Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency) Приклад exchange(10000,[{currency:'USD',value:25},{currency:'EUR',value:42}],'USD') // => 400
+        
+        function exchange (sumUAH, currencyValues, exchangeCurrency){
+            let chosenCurrency;
+            for (const item of currencyValues){
+                if (item.currency === exchangeCurrency){
+                    chosenCurrency = item;
+                }
+            }
+            let result = sumUAH/chosenCurrency.value;
+            return result;
+        }
+
+        console.log(exchange(10000, [{currency:'USD', value:25}, {currency:'EUR', value:42}], 'USD'))
+    </script>
+</body>
+</html>

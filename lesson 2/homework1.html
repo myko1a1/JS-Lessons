@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let Array = ['Mykola', 34, true, false, '56', 'Rocket', 67];
+        console.log('----------------HW 1------------------------')
+        console.log(Array);
+        console.log('----------------HW 2------------------------')
+        
+        let Book1 = {
+            title: 'Harry Potter',
+            pageCount: 123,
+            genre: 'Roman',
+        }
+        let Book2 = {
+            title: 'Vonka',
+            pageCount: 13,
+            genre: 'Roman',
+        }
+        let Book3 = {
+            title: 'Times New Roman',
+            pageCount: 230,
+            genre: 'Roman',
+        }
+        let BooksArray = [Book1, Book2, Book3];
+        console.log(BooksArray)
+         
+
+        let Book4 = {
+            title: 'Harry Potter',
+            pageCount: 123,
+            genre: 'Roman',
+            author: {
+                name: 'Maksym',
+                age: 35,
+            }
+        }
+        let Book5 = {
+            title: 'Vonka',
+            pageCount: 13,
+            genre: 'Roman',
+            author: {
+                name: 'Boris',
+                age: 40,
+            }
+        }
+        let Book6 = {
+            title: 'Times New Roman',
+            pageCount: 230,
+            genre: 'Roman',
+            author: {
+                name: 'Kolya',
+                age: 50,
+            }
+        }
+        let BooksArrayAuthors = [Book4, Book5, Book6];
+        console.log(BooksArrayAuthors);
+        console.log('----------------HW 4------------------------');
+
+        let UserInfo = [
+            {name: 'Vitya', username: 'BomBom', password: '321qwerty'},
+            {name: 'Bodya', username: 'BomBom', password: '123qwerty'},
+            {name: 'Kent', username: 'BomBom', password: '123qweRty'},
+            {name: 'Oleg', username: 'BomBom', password: '123qwerTY'},
+            {name: 'Brat', username: 'BomBom', password: '123qwqwqwqw'},
+            {name: 'Valera', username: 'BomBom', password: '123qweryt'},
+            {name: 'Voskresenskiy', username: 'BomBom', password: '234qwerty'},
+            {name: 'Vadim', username: 'BomBom', password: 'asdqwerty'},
+            {name: 'Ilya', username: 'BomBom', password: 'ASDqwerty'},
+            {name: '', username: 'BomBom', password: 'vfvkmgbqwerty'}
+        ]
+
+        console.log(UserInfo[0].password);
+        console.log(UserInfo[1].password);
+        console.log(UserInfo[2].password);
+        console.log(UserInfo[3].password);
+        console.log(UserInfo[4].password);
+        console.log(UserInfo[5].password);
+        console.log(UserInfo[6].password);
+        console.log(UserInfo[7].password);
+        console.log(UserInfo[8].password);
+        console.log(UserInfo[9].password);
+        console.log('----------------HW 5------------------------');
+
+        let Weather = [
+            {daytime: 'Morning', day1: 12, day2: 32, day3: 43, day4: 11, day5: 33, day6: 21, day7: 67},
+            {daytime: 'Afternoon', day1: 12, day2: 32, day3: 43, day4: 11, day5: 33, day6: 21, day7: 67},
+            {daytime: 'Night', day1: 12, day2: 32, day3: 43, day4: 11, day5: 33, day6: 21, day7: 67}
+        ]
+        console.log(Weather);
+        console.log('----------------HW 6------------------------');
+
+        let x = -3;
+        if(x != 0) {
+            console.log('All Right!');
+        }else{
+            console.log('Hell nah');
+        }
+        console.log('----------------HW 7------------------------');
+
+        let time = 31;
+
+        if (time <= 15){
+            console.log('первая чверть')
+        }else if(time <= 30){
+            console.log('вторая чверть')
+        }else if(time <= 45){
+            console.log('третья чверть')
+        }else if(time <= 60){
+            console.log('четвертая чверть')
+        }
+        console.log('----------------HW 8------------------------');
+        // let Day = prompt('1-7')
+        let Day = 2;
+        let DayPlan = Day
+        switch (DayPlan){
+            case '1':
+                console.log('пописять, покакать')
+                break;
+            case '2':
+                console.log('пописять, покакать')
+                break
+            case '3':
+                console.log('пописять, покакать')
+                break
+            case '4':
+                console.log('пописять, покакать')
+                break
+            case '5':
+                console.log('пописять, покакать')
+                break
+            case '6':
+                console.log('пописять, покакать')
+                break
+            case '7':
+                console.log('пописять, покакать')
+                break
+        }
+        console.log('----------------HW 9------------------------');
+
+        let num1 = prompt();
+        let num2 = prompt();
+
+        if (num1 > num2){
+            console.log(num1)
+
+        }else if (num2 > num1){
+            console.log(num2)
+
+        }else if(num1 = num2){
+            console.log('Оба числа одинаковы!')
+        }
+        console.log('----------------HW 10------------------------');
+
+        let coursesTitleArray = [
+    'JavaScript Complex',
+    'Java Complex',
+    'Python Complex',
+    'QA Complex',
+    'Fullstack',
+    'Frontend'
+];
+let coursesAndDurationArray = [
+    {title: 'JavaScript Complex', monthDuration: 5},
+    {title: 'Java Complex', monthDuration: 6},
+    {title: 'Python Complex', monthDuration: 6},
+    {title: 'QA Complex', monthDuration: 4},
+    {title: 'FullStack', monthDuration: 7},
+    {title: 'Frontend', monthDuration: 4}
+];
+
+if (coursesAndDurationArray[0].monthDuration >= 5){
+    console.log('super!')
+}else{
+    console.log('hell nah')
+}
+if (coursesAndDurationArray[1].monthDuration >= 5){
+    console.log('super!')
+}else{
+    console.log('hell nah')
+}
+if (coursesAndDurationArray[2].monthDuration >= 5){
+    console.log('super!')
+}else{
+    console.log('hell nah')
+}
+if (coursesAndDurationArray[3].monthDuration >= 5){
+    console.log('super!')
+}else{
+    console.log('hell nah')
+}
+if (coursesAndDurationArray[4].monthDuration >= 5){
+    console.log('super!')
+}else{
+    console.log('hell nah')
+}
+if (coursesAndDurationArray[5].monthDuration >= 5){
+    console.log('super!')
+}else{
+    console.log('hell nah')
+}
+
+    
+    </script>
+</body>
+</html>
